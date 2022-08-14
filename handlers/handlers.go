@@ -7,7 +7,6 @@ import (
 
 	"github.com/epimentelo/twittor/middlew"
 	"github.com/epimentelo/twittor/routers"
-
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 )

@@ -22,7 +22,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if len(t.Password) < 6 {
-		http.Error(w, "debe especificar una contrasena de almenos 6 caracteres", 400)
+		http.Error(w, "debe especificar una contrasena de almenos 6 caracteresss", 400)
 		return
 	}
 	_, encontrado, _ := bd.ChequeoYaExisteUsuario(t.Email)
@@ -35,10 +35,10 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "ocurrio un error al intentar realizar el resgistro de usuario"+err.Error(), 400)
 		return
 	}
-	/*if status == false {
+	if status == false {
 		http.Error(w, "no se ha logrado insertar el registro del usuario", 400)
 		return
-	}*/
+	}
 	w.WriteHeader(http.StatusCreated)
 
 }
